@@ -10,8 +10,6 @@ public interface IGestionDeUsuarios {
     public void buscarUsuario(String nombre,String contraseña);
           
     public void verUsuarios();
-   //para ingresar por teclado
-    public Usuario nuevoUsuario();
-   //para ingresar por teclado
-    public String ingresarContraseña();
+
+   
 }

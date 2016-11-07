@@ -56,18 +56,6 @@ public class Cuentas implements IGestionDeUsuarios {
         System.out.println(listaDeUsuarios);
     }
 
-    @Override
-    public Usuario nuevoUsuario() {
-        String nombreUsu;
-        String contraseñaUsu;
-       
-        System.out.println("ingrese el usuario: ");
-         nombreUsu=tec.next();
-         System.out.println("contraseña:");
-         contraseñaUsu=tec.next();
-         return new Usuario(nombreUsu, contraseñaUsu);
-    }
-
     
 
 }
