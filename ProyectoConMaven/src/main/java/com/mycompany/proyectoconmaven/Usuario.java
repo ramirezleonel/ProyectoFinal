@@ -8,31 +8,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
 public class Usuario {
 
     public Usuario() {
-        
-        
+
     }
 
     private String nombreDeUsuario;
     private String contraseña;
 
     Usuario(String nombre, String contraseña) {
-        this.nombreDeUsuario=nombre;
-        this.contraseña=contraseña;
+        this.nombreDeUsuario = nombre;
+        this.contraseña = contraseña;
     }
-
-
-   
-
 
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 17 * hash + Objects.hashCode(this.nombreDeUsuario);
-        hash = 17 * hash + Objects.hashCode(this.contraseña);
         return hash;
     }
 
@@ -47,27 +40,19 @@ public class Usuario {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Usuario otroUsu = (Usuario) obj;
+        Usuario otroUsu = (Usuario) obj;
         if (!Objects.equals(this.nombreDeUsuario, otroUsu.nombreDeUsuario)) {
             return false;
-        } else if (!Objects.equals(this.contraseña, otroUsu.contraseña)) {
-            return false;
+
         } else {
             return true;
         }
     }
 
-    @Override
-    public String toString() {
-        return "Usuario: " + nombreDeUsuario + "  contraseña: "+contraseña;
-    }
-  
     public String getNombreDeUsuario() {
         return nombreDeUsuario;
     }
-     
 
-   
     public void setNombreDeUsuario(String nombreDeUsuario) {
         this.nombreDeUsuario = nombreDeUsuario;
     }
@@ -80,7 +65,4 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-   
-
-   
 }

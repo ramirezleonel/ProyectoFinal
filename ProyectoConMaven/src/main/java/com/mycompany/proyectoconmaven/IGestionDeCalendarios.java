@@ -1,15 +1,17 @@
 package com.mycompany.proyectoconmaven;
 
+import java.util.List;
+
 public interface IGestionDeCalendarios {
 
-    public Evento crearEventos();
+   public List<Evento> crearEventos(Evento evento);
 
-    public void verEvento();
+    public List<Evento> verEvento();
 
-    public void eliminarEvento(String nombreEvento);
+    public void eliminarEvento(Evento evento);
 
-    public Evento buscarEvento(String nombreEvento);
+    public Evento buscarEventoNombre(String nombreEvento);
 
-    public Evento buscarEvento(Fechas fecha);
+    public Evento buscarEventoFecha(Fechas fecha);
 
 }

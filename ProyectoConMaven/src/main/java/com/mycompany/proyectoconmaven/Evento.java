@@ -3,10 +3,14 @@ package com.mycompany.proyectoconmaven;
 public class Evento {
   private String nombre;
   private String descripcion;
-  private Fechas fechaIni;
-  private Fechas fechaFin;
+  private int fechaIni;
+  private int fechaFin;
 
-    public Evento(String nombre, String descripcion, Fechas fechaIni, Fechas fechaFin) {
+    public Evento() { 
+        
+    }
+
+    public Evento(String nombre, String descripcion, int fechaIni, int fechaFin) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaIni = fechaIni;
@@ -15,7 +19,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento: " + "titulo: " + nombre + "/n descripcion: " 
+        return "Evento: " + "titulo: " + nombre + " descripcion: " 
                 + descripcion + "/n fechaIni: " + fechaIni + "/n fechaFin:" +
                 fechaFin + "/n";
     }
@@ -36,19 +40,19 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-    public Fechas getFechaIni() {
+    public int getFechaIni() {
         return fechaIni;
     }
 
-    public void setFechaIni(Fechas fechaIni) {
+    public void setFechaIni(int fechaIni) {
         this.fechaIni = fechaIni;
     }
 
-    public Fechas getFechaFin() {
+    public int getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Fechas fechaFin) {
+    public void setFechaFin(int fechaFin) {
         this.fechaFin = fechaFin;
     }
 }
