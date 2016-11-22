@@ -36,6 +36,14 @@ public class EventosController implements IGestionDeCalendarios {
         return getListaEventos();
     }
 
+    @RequestMapping(method = RequestMethod.DELETE)
+    @Override
+    public List<Evento> eliminarEvento(@RequestBody Evento evento) {
+
+        listaEventos.remove(evento);
+        return listaEventos;
+    }
+
     @Override
     public Evento buscarEventoNombre(String nombreEvento) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -43,11 +51,6 @@ public class EventosController implements IGestionDeCalendarios {
 
     @Override
     public Evento buscarEventoFecha(Fechas fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void eliminarEvento(Evento evento) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

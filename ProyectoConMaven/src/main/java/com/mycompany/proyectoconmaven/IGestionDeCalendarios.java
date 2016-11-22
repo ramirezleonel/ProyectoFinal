@@ -8,7 +8,7 @@ public interface IGestionDeCalendarios {
 
     public List<Evento> verEvento();
 
-    public void eliminarEvento(Evento evento);
+    public List<Evento> eliminarEvento(Evento evento);
 
     public Evento buscarEventoNombre(String nombreEvento);
 
