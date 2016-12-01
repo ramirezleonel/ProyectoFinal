@@ -25,21 +25,21 @@ public class EventosController implements IGestionDeCalendarios {
     @RequestMapping(method = RequestMethod.GET)
     @Override
     public List<Evento> verEvento() {
-        listaEventos.add(new Evento("nombre", "descripcion", 833, 672));
+      listaEventos.add(new Evento("nombre", "descripcion", new Fecha(02, Mes.Mayo, 2010), new Fecha(02, Mes.Mayo, 2011)));
         return listaEventos;
     }
 
     @RequestMapping(method = RequestMethod.POST)
     @Override
     public List<Evento> crearEventos(@RequestBody Evento evento) {
-        listaEventos.add(evento);
+        listaEventos.add(new Evento("nombre", "descripcion", new Fecha(02, Mes.Mayo, 2010), new Fecha(02, Mes.Mayo, 2011)));
         return getListaEventos();
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
     @Override
     public List<Evento> eliminarEvento(@RequestBody Evento evento) {
-
+        //elimina si la busqueda los nombres son iguales
         listaEventos.remove(evento);
         return listaEventos;
     }
@@ -50,7 +50,7 @@ public class EventosController implements IGestionDeCalendarios {
     }
 
     @Override
-    public Evento buscarEventoFecha(Fechas fecha) {
+    public Evento buscarEventoFecha(Fecha fecha) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

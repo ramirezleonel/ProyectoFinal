@@ -1,18 +1,35 @@
 package com.mycompany.proyectoconmaven;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class Evento {
   private String nombre;
   private String descripcion;
-  private int fechaIni;
-  private int fechaFin;
+ private Fecha fechaIni;
+  private Fecha fechaFin;
+    public Fecha getFechaIni() {
+        return fechaIni;
+    }
+
+    public void setFechaIni(Fecha fechaIni) {
+        this.fechaIni = fechaIni;
+    }
+
+    public Fecha getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Fecha fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+ 
 
     public Evento() { 
         
     }
 
-    public Evento(String nombre, String descripcion, int fechaIni, int fechaFin) {
+    public Evento(String nombre, String descripcion, Fecha fechaIni, Fecha fechaFin) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaIni = fechaIni;
@@ -67,19 +84,5 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-    public int getFechaIni() {
-        return fechaIni;
-    }
-
-    public void setFechaIni(int fechaIni) {
-        this.fechaIni = fechaIni;
-    }
-
-    public int getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(int fechaFin) {
-        this.fechaFin = fechaFin;
-    }
+  
 }
