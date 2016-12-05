@@ -4,16 +4,54 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Evento {
-  private String nombre;
-  private String descripcion;
- private Fecha fechaIni;
-  private Fecha fechaFin;
+
+    private String titulo;
+    private String descripcion;
+    private Fecha fechaIni;
+    private Fecha fechaFin;
+    private Tiempo horaInicio;
+    private Tiempo horaFin;
+
+    public Tiempo getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(Tiempo horaInicio) {
+        if (horaInicio != null) {
+            this.horaInicio = horaInicio;
+        } else {
+
+            throw new NullPointerException("el campo hora es obligatorio,No puede estar vacio!!");
+        }
+
+    }
+
+    public Tiempo getHoraFin() {
+        return horaFin;
+    }
+
+    public void setHoraFin(Tiempo horaFin) {
+
+        if (horaFin != null) {
+            this.horaFin = horaFin;
+        } else {
+            throw new NullPointerException("el campo hora es obligatorio,No puede estar vacio!!");
+        }
+
+    }
+
     public Fecha getFechaIni() {
         return fechaIni;
     }
 
     public void setFechaIni(Fecha fechaIni) {
-        this.fechaIni = fechaIni;
+        if (fechaIni.getMes() != null && fechaIni.getDia() != 0 && fechaIni.getAño() != 0) {
+
+            this.fechaIni = new Fecha(fechaIni.getDia(), fechaIni.getMes(), fechaIni.getAño());
+        } else {
+            throw new NullPointerException("la fecha del evento es obligatorio,no puede estar vacio!!");
+        }
+
     }
 
     public Fecha getFechaFin() {
@@ -21,32 +59,43 @@ public class Evento {
     }
 
     public void setFechaFin(Fecha fechaFin) {
-        this.fechaFin = fechaFin;
-    }
- 
+        if (fechaFin.getMes() != null
+                && fechaFin.getDia() != 0
+                && fechaFin.getAño() != 0) {
 
-    public Evento() { 
-        
+            this.fechaFin = fechaFin;
+
+        } else {
+            throw new NullPointerException("la fecha del evento es obligatorio,no puede estar vacio!!");
+        }
+
     }
 
-    public Evento(String nombre, String descripcion, Fecha fechaIni, Fecha fechaFin) {
-        this.nombre = nombre;
+    public Evento() {
+
+    }
+
+    public Evento(String nombre, String descripcion, Fecha fechaIni,
+            Fecha fechaFin, Tiempo horaIni, Tiempo horaFin) {
+        this.titulo = nombre;
         this.descripcion = descripcion;
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
+        this.horaInicio = horaIni;
+        this.horaFin = horaFin;
     }
 
     @Override
     public String toString() {
-        return "Evento: " + "titulo: " + nombre + " descripcion: " 
-                + descripcion + "/n fechaIni: " + fechaIni + "/n fechaFin:" +
-                fechaFin + "/n";
+        return "Evento: " + "titulo: " + titulo + " descripcion: "
+                + descripcion + " fechaIni: " + fechaIni + " fechaFin:"
+                + fechaFin + "horainicio" + horaInicio + "hasta" + horaFin;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.nombre);
+        hash = 59 * hash + Objects.hashCode(this.titulo);
         return hash;
     }
 
@@ -62,18 +111,24 @@ public class Evento {
             return false;
         }
         Evento otroEvento = (Evento) obj;
-        if (!Objects.equals(this.nombre, otroEvento.nombre)) {
+        if (!Objects.equals(this.titulo, otroEvento.titulo)) {
             return false;
         }
         return true;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTitulo(String titulo) {
+        if (titulo != null) {
+            this.titulo = titulo;
+        } else {
+            throw new NullPointerException("el titulo del evento es obligatorio"
+                    + ",no puede estar vacio!!");
+        }
+
     }
 
     public String getDescripcion() {
@@ -84,5 +139,4 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-  
 }

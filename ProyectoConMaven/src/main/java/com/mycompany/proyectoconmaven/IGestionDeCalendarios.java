@@ -12,6 +12,6 @@ public interface IGestionDeCalendarios {
 
     public Evento buscarEventoNombre(String nombreEvento);
 
-    public Evento buscarEventoFecha(Fecha fecha);
+ 
 
 }

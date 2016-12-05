@@ -8,7 +8,7 @@ public enum Mes  {
     Junio(30),Julio(31),Agosto(31),Septiembre(30),
     Octubre(31),Noviembre(30),Diciembre(31);
 
-    private Mes(int dia) {
+   private Mes(int dia) {
         this.dia = dia;
     }
    
