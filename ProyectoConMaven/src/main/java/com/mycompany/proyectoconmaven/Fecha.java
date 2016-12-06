@@ -10,9 +10,11 @@ public class Fecha {
     }
 
     public Fecha(int dia, Mes mes, int año) {
+
         this.dia = dia;
         this.mes = mes;
         this.año = año;
+
     }
 
     public void setMes(Mes mes) {
@@ -23,15 +25,15 @@ public class Fecha {
         return dia;
     }
 
-    public void setDia(int dia) throws ErrorDiaException{
-        
-        if(dia>31||dia<=0){
+    public void setDia(int dia) throws ErrorDiaException {
+
+        if (dia <= 0) {
             throw new ErrorDiaException();
-       
-        }else{
-         this.dia = dia;
+
+        } else {
+            this.dia = dia;
         }
-      
+
     }
 
     public Mes getMes() {
@@ -42,8 +44,13 @@ public class Fecha {
         return año;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAño(int año) throws ErrorAñoException {
+        if (año <= 0||año<4000) {
+            throw new ErrorAñoException();
+        } else {
+            this.año = año;
+        }
+
     }
 
     @Override

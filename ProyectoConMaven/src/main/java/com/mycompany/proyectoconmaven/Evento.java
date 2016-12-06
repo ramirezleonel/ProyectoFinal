@@ -56,7 +56,7 @@ public class Evento {
     public void setHoraInicio(Tiempo horaInicio) {
         if (horaInicio != null) {
             this.horaInicio = horaInicio;
-        } else {
+        }else{
 
             throw new NullPointerException("el campo hora es obligatorio,No puede estar vacio!!");
         }
@@ -64,11 +64,12 @@ public class Evento {
     }
 
     public Tiempo getHoraFin() {
+        
         return horaFin;
     }
 
     public void setHoraFin(Tiempo horaFin) {
-
+        
         if (horaFin != null) {
             this.horaFin = horaFin;
         } else {
