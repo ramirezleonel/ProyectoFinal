@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/listaUsuario")
+@RequestMapping("/Usuario")
 @RestController
 public class UsuarioController implements IGestionDeUsuarios {
 
-    Usuario usuarioPrueba = new Usuario("Leonel", "123456");
-    private Set<Usuario> lista = new LinkedHashSet<Usuario>();
+    private static final Usuario usuarioPrueba = new Usuario("Leonel", "123456");
+    private static Set<Usuario> lista = new LinkedHashSet<Usuario>();
 
-    public Set<Usuario> getLista() {
+    public static Set<Usuario> getLista() {
         if (lista.isEmpty()) {
             lista.add(usuarioPrueba);
         }

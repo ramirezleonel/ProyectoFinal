@@ -11,6 +11,43 @@ public class Evento {
     private Fecha fechaFin;
     private Tiempo horaInicio;
     private Tiempo horaFin;
+    private ColoresEventos color;
+    private Usuario invitado;
+
+    public Usuario getInvitado() {
+        return invitado;
+    }
+
+    public void setInvitado(Usuario invitado) {
+      
+        for (Usuario usuario : UsuarioController.getLista()) {
+            if (usuario.getNombreDeUsuario()
+                    .equalsIgnoreCase(invitado.getNombreDeUsuario())) {
+                //la contraseña siempre será nula
+                invitado.setContraseña(null);
+                this.invitado = invitado;
+
+            }
+
+        }
+
+    }
+
+    public ColoresEventos getColor() {
+
+        if (color == null) {
+
+            color = ColoresEventos.Ninguno;
+        }
+
+        return color;
+    }
+
+    public void setColor(ColoresEventos color) {
+
+        this.color = color;
+
+    }
 
     public Tiempo getHoraInicio() {
         return horaInicio;
@@ -76,13 +113,14 @@ public class Evento {
     }
 
     public Evento(String nombre, String descripcion, Fecha fechaIni,
-            Fecha fechaFin, Tiempo horaIni, Tiempo horaFin) {
+            Fecha fechaFin, Tiempo horaIni, Tiempo horaFin,Usuario invitado) {
         this.titulo = nombre;
         this.descripcion = descripcion;
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
         this.horaInicio = horaIni;
         this.horaFin = horaFin;
+        this.invitado=invitado;
     }
 
     @Override
