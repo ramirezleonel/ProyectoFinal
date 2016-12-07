@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mycompany.proyectoconmaven.EventosControllerTest" time="0.006" tests="7" errors="0" skipped="0" failures="7">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_77\jre\bin"/>
+    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="com.mycompany.proyectoconmaven.EventosControllerTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\leox\Documents\NetBeansProjects\ProyectoConMaven22"/>
+    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\leox\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="maven.ext.class.path" value="C:\Program Files (x86)\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files (x86)\NetBeans 8.1\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\leox"/>
+    <property name="user.timezone" value="America/Buenos_Aires"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="leox"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\NetBeans 8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_77\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.mycompany.proyectoconmaven.EventosControllerTest -Dmaven.ext.class.path=C:\Program Files (x86)\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.8.0_77"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_77\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files (x86)\NetBeans 8.1\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase name="testVerEvento" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0.005">
+    <failure message="expected:&lt;null&gt; but was:&lt;[Evento: titulo: Ejemplo:evento descripcion: descripcion fechaIni: Mayo/3/2013  fechaFin:Mayo/5/2014 horainicio2:31hasta3:21]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[Evento: titulo: Ejemplo:evento descripcion: descripcion fechaIni: Mayo/3/2013  fechaFin:Mayo/5/2014 horainicio2:31hasta3:21]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testVerEvento(EventosControllerTest.java:77)
+]]></failure>
+    <system-out><![CDATA[verEvento
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarEventoNombre" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testBuscarEventoNombre(EventosControllerTest.java:124)
+</failure>
+    <system-out><![CDATA[buscarEventoNombre
+]]></system-out>
+  </testcase>
+  <testcase name="testGetListaEventos" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testGetListaEventos(EventosControllerTest.java:50)
+]]></failure>
+    <system-out><![CDATA[getListaEventos
+]]></system-out>
+  </testcase>
+  <testcase name="testSetListaEventos" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testSetListaEventos(EventosControllerTest.java:65)
+</failure>
+    <system-out><![CDATA[setListaEventos
+]]></system-out>
+  </testcase>
+  <testcase name="testEditarEvento" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0.001">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testEditarEvento(EventosControllerTest.java:137)
+]]></failure>
+    <system-out><![CDATA[editarEvento
+]]></system-out>
+  </testcase>
+  <testcase name="testEliminarEvento" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testEliminarEvento(EventosControllerTest.java:107)
+]]></failure>
+    <system-out><![CDATA[eliminarEvento
+]]></system-out>
+  </testcase>
+  <testcase name="testCrearEventos" classname="com.mycompany.proyectoconmaven.EventosControllerTest" time="0">
+    <failure message="expected:&lt;null&gt; but was:&lt;[null]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[null]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.mycompany.proyectoconmaven.EventosControllerTest.testCrearEventos(EventosControllerTest.java:92)
+]]></failure>
+    <system-out><![CDATA[crearEventos
+]]></system-out>
+  </testcase>
+</testsuite>

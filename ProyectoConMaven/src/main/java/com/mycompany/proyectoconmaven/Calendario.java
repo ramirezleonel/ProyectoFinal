@@ -7,11 +7,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 public class Calendario implements IVistasEventos {
 
     protected List<Evento> listaEventos = new ArrayList<Evento>();
+    protected Usuario invitado;
+    protected Notificaciones estado;
 
+    public Notificaciones getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Notificaciones estado) {
+        this.estado = estado;
+    }
     public Calendario() {
     }
 
@@ -22,6 +30,25 @@ public class Calendario implements IVistasEventos {
     public void setListaEventos(List<Evento> listaEventos) {
 
         this.listaEventos = listaEventos;
+    }
+
+    public Usuario getInvitado() {
+        return invitado;
+    }
+
+    public void setInvitado(Usuario invitado) {
+
+        for (Usuario usuario : UsuarioController.getLista()) {
+            if (usuario.getNombreDeUsuario()
+                    .equalsIgnoreCase(invitado.getNombreDeUsuario())) {
+                //la contraseña siempre será nula
+                invitado.setContraseña(null);
+                this.invitado = invitado;
+
+            }
+
+        }
+
     }
 
     @Override

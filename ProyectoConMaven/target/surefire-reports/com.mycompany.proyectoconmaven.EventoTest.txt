@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.proyectoconmaven.EventoTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.015 sec <<< FAILURE! - in com.mycompany.proyectoconmaven.EventoTest
+testGetTitulo(com.mycompany.proyectoconmaven.EventoTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: el titulo del evento es obligatorio,no puede estar vacio!!
+	at com.mycompany.proyectoconmaven.Evento.setTitulo(Evento.java:157)
+	at com.mycompany.proyectoconmaven.EventoTest.testGetTitulo(EventoTest.java:78)
+

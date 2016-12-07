@@ -3,7 +3,7 @@ package com.mycompany.proyectoconmaven;
 import java.util.Map;
 import java.util.Objects;
 
-public class Evento {
+public class Evento extends Calendario{
 
     private String titulo;
     private String descripcion;
@@ -12,26 +12,10 @@ public class Evento {
     private Tiempo horaInicio;
     private Tiempo horaFin;
     private ColoresEventos color;
-    private Usuario invitado;
+  
 
-    public Usuario getInvitado() {
-        return invitado;
-    }
-
-    public void setInvitado(Usuario invitado) {
-      
-        for (Usuario usuario : UsuarioController.getLista()) {
-            if (usuario.getNombreDeUsuario()
-                    .equalsIgnoreCase(invitado.getNombreDeUsuario())) {
-                //la contraseña siempre será nula
-                invitado.setContraseña(null);
-                this.invitado = invitado;
-
-            }
-
-        }
-
-    }
+ 
+ 
 
     public ColoresEventos getColor() {
 

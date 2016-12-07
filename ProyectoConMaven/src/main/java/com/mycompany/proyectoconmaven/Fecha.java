@@ -27,7 +27,7 @@ public class Fecha {
 
     public void setDia(int dia) throws ErrorDiaException {
 
-        if (dia <= 0) {
+        if (dia <= 0||dia>=31) {
             throw new ErrorDiaException();
 
         } else {
@@ -45,7 +45,7 @@ public class Fecha {
     }
 
     public void setAño(int año) throws ErrorAñoException {
-        if (año <= 0||año<4000) {
+        if (año <= 0 || año >= 4000) {
             throw new ErrorAñoException();
         } else {
             this.año = año;

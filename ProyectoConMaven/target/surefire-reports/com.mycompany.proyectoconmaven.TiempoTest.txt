@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.proyectoconmaven.TiempoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE! - in com.mycompany.proyectoconmaven.TiempoTest
+testSetMin2(com.mycompany.proyectoconmaven.TiempoTest)  Time elapsed: 0.004 sec  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<com.mycompany.proyectoconmaven.TiempoException> but was<java.lang.RuntimeException>
+	at com.mycompany.proyectoconmaven.TiempoTest.testSetMin2(TiempoTest.java:50)
+

@@ -16,7 +16,7 @@ public class EventosController extends Calendario implements IGestionDeCalendari
 
     Evento ejemploEvento = new Evento("Ejemplo", "descripcion",
             new Fecha(3, Mes.Mayo, 2013), new Fecha(5, Mes.Mayo, 2014),
-            new Tiempo(2, 31), new Tiempo(3, 21), new Usuario(null, null));
+            new Tiempo(2, 31), new Tiempo(3, 21), new Usuario("roberto", "fabricio"));
 
     @RequestMapping(method = RequestMethod.GET)
     @Override
@@ -34,10 +34,11 @@ public class EventosController extends Calendario implements IGestionDeCalendari
     @RequestMapping(method = RequestMethod.POST)
 
     public List<Evento> crearEventos(@RequestBody Evento evento) throws ErrorDiaException {
-        Mes mesIni=evento.getFechaIni().getMes();
-        Mes mesFin=evento.getFechaFin().getMes();
-        if(mesIni.getDia()>=evento.getFechaIni().getDia()
-                &&mesFin.getDia()>=evento.getFechaFin().getDia()){
+        int diaIni =evento.getFechaIni().getMes().getDia();
+        int diaFin =evento.getFechaFin().getMes().getDia();
+        //inicializo las variables con la cantidad de dias disponibles de ese mes
+        if(diaIni>=evento.getFechaIni().getDia()
+                &&diaFin>=evento.getFechaFin().getDia()){
          listaEventos.add(evento);
         }else{
         throw new ErrorDiaException();
